@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>verticalScroller.js</title>
+    <title>Demo | Correct Time</title>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,24 +17,34 @@
         min-width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
       }
       .loader {
-          width: 150px;
-          height: 150px;
+        width: 150px;
+        height: 150px;
       }
       .loader-bg {
-          border: 5px solid rgba(0,0,0,0.4);
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        border: 5px solid #000;
+        border: 5px solid #eeeeee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+      .text {
+        font-size: 20px;
+        color: rgb(135, 206, 235);
+        font-weight: bold;
+      }
+      .loader-spiner {
+        border: 5px solid rgb(135, 206, 235);
+      }
+
     </style>
   </head>
   <body>
-    <div class="loader">
+    <div class="loader" id="timer-1">
         <div class="loader-bg">
-            <div class="text"></div>
+            <div class="text">00:00:00</div>
         </div>        
         <div class="spiner-holder-one animate-0-25-a">
             <div class="spiner-holder-two animate-0-25-b">
@@ -57,6 +67,37 @@
             </div>
         </div>
     </div>
+    <div class="loader" id="timer-2">
+        <div class="loader-bg">
+            <div class="text">00:00:00</div>
+        </div>        
+        <div class="spiner-holder-one animate-0-25-a">
+            <div class="spiner-holder-two animate-0-25-b">
+                <div class="loader-spiner" style=""></div>
+            </div>
+        </div>
+        <div class="spiner-holder-one animate-25-50-a">
+            <div class="spiner-holder-two animate-25-50-b">
+                <div class="loader-spiner"></div>
+            </div>
+        </div>
+        <div class="spiner-holder-one animate-50-75-a">
+            <div class="spiner-holder-two animate-50-75-b">
+                <div class="loader-spiner"></div>
+            </div>
+        </div>
+        <div class="spiner-holder-one animate-75-100-a">
+            <div class="spiner-holder-two animate-75-100-b">
+                <div class="loader-spiner"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+            var t1 = new timer('{"element" : "#timer-1","maxTime" : 10}');
+            var t2= new timer('{"element" : "#timer-2","maxTime" : 20}');
+      });
+    </script>
   </body>
 </html>
   
