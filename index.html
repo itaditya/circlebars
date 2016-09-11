@@ -42,9 +42,9 @@
     </style>
   </head>
   <body>
-    <div class="loader" id="timer-1">
+    <div class="loader" id="timer-1" data-timer-maxTime=30>
         <div class="loader-bg">
-            <div class="text">00:00:00</div>
+            <div class="text"></div>
         </div>        
         <div class="spiner-holder-one animate-0-25-a">
             <div class="spiner-holder-two animate-0-25-b">
@@ -67,9 +67,34 @@
             </div>
         </div>
     </div>
-    <div class="loader" id="timer-2">
+    <div class="loader timer-2" data-timer-startTime=1>
         <div class="loader-bg">
-            <div class="text">00:00:00</div>
+            <div class="text"></div>
+        </div>        
+        <div class="spiner-holder-one animate-0-25-a">
+            <div class="spiner-holder-two animate-0-25-b">
+                <div class="loader-spiner" style=""></div>
+            </div>
+        </div>
+        <div class="spiner-holder-one animate-25-50-a">
+            <div class="spiner-holder-two animate-25-50-b">
+                <div class="loader-spiner"></div>
+            </div>
+        </div>
+        <div class="spiner-holder-one animate-50-75-a">
+            <div class="spiner-holder-two animate-50-75-b">
+                <div class="loader-spiner"></div>
+            </div>
+        </div>
+        <div class="spiner-holder-one animate-75-100-a">
+            <div class="spiner-holder-two animate-75-100-b">
+                <div class="loader-spiner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="loader correctTimer" data-timer-startTime=0>
+        <div class="loader-bg">
+            <div class="text"></div>
         </div>        
         <div class="spiner-holder-one animate-0-25-a">
             <div class="spiner-holder-two animate-0-25-b">
@@ -95,7 +120,7 @@
     <script>
       $(document).ready(function(){
             var t1 = new timer('{"element" : "#timer-1","maxTime" : 10}');
-            var t2= new timer('{"element" : "#timer-2","maxTime" : 20}');
+            var t2= new timer('{"element" : ".timer-2","maxTime" : 20}');
       });
     </script>
   </body>

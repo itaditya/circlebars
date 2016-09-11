@@ -1,23 +1,30 @@
 $(document).ready(function(){
-      // var t = new timer();
-      // console.log(t);
+    var prefs = '{"element" : ".correctTimer"}';
+    $('.correctTimer').each(function (index, value) {
+        new timer(prefs);
+    });
 });
-
 function timer(prefs){
     prefs = JSON.parse(prefs);
     this.element = $(prefs.element);
     this.time = 0;
-    this.maxTime = prefs.maxTime || 60;
+    this.maxTime = 60;
     var percentage = 0;
     var that = this;
     var date = 0;
+    var attribs = this.element.find("div")[0].parentNode.dataset;
+    this.initialise = function(){
+        that.time = parseInt(attribs.timerStarttime) || parseInt(prefs.startTime) || 0;
+        that.maxTime = parseInt(attribs.timerMaxtime) || parseInt(prefs.maxTime) || 60;
+    }
+    this.initialise();
     this.timer = setInterval(function(){
         if(that.time < that.maxTime){
             that.time += 1;
             percentage = (that.time*100)/that.maxTime;
             that.renderProgress(percentage);
             date = new Date(null);
-            date.setSeconds(that.time); // specify value for SECONDS here
+            date.setSeconds(that.time); // specify value for seconds here
             that.element.find(".text").html(date.toISOString().substr(11, 8));
             that.element.find(".text")[0].dataset.time = that.time;
         }
