@@ -1,4 +1,4 @@
-# verticalScroller.js
+# Circle Bars
 
 >Circle Bars is a Jquery plugin which is used to add circular countdown timers or progress bars in your project easily.
 It is less than 2KB when minified.
@@ -15,7 +15,7 @@ in your html file. It's better to initialize it in head tag.
  <script src="path/to/circle-min.js"></script>
 </head>
 ```
-*** Dependency : It depends on jquery. So initialize jquery before verticalScroller.js***
+    Dependency : It depends on jquery. So initialize jquery before circle-min.js
 
 #General Notes
 
@@ -32,7 +32,7 @@ or
     new timer('{"element" : ".timer-2","maxTime" : 300,"fontSize" : "2em"}');
 
 ```
-*** Note: the parameters provided must be in JSON ***
+    Note: the parameters provided must be in JSON
 
 Option 2. -- By adding a .correctTimer class to the element.
 
