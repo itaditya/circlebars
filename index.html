@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>verticalScroller.js</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="circle.css">
+    <script type="text/javascript" src= "circle.js"></script>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+        min-height: 100vh;
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .loader {
+          width: 150px;
+          height: 150px;
+      }
+      .loader-bg {
+          border: 5px solid rgba(0,0,0,0.4);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+        <div class="loader-bg">
+            <div class="text"></div>
+        </div>        
+        <div class="spiner-holder-one animate-0-25-a">
+            <div class="spiner-holder-two animate-0-25-b">
+                <div class="loader-spiner" style=""></div>
+            </div>
+        </div>
+        <div class="spiner-holder-one animate-25-50-a">
+            <div class="spiner-holder-two animate-25-50-b">
+                <div class="loader-spiner"></div>
+            </div>
+        </div>
+        <div class="spiner-holder-one animate-50-75-a">
+            <div class="spiner-holder-two animate-50-75-b">
+                <div class="loader-spiner"></div>
+            </div>
+        </div>
+        <div class="spiner-holder-one animate-75-100-a">
+            <div class="spiner-holder-two animate-75-100-b">
+                <div class="loader-spiner"></div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+  
