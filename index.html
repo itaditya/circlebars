@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="circle.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <script type="text/javascript" src= "circle.js"></script>
     <style>
       body {
@@ -15,112 +16,135 @@
         margin: 0px;
         min-height: 100vh;
         min-width: 100%;
+      }
+      .page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Lato', sans-serif;
+        min-height: 1005;
+        min-width: 100%;
+      }
+      .page > h1 {
+        font-weight: 300;
+
+      }
+      .circles-container {
+        min-height: 400px;
+        width: 80%;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-around;  
       }
       .loader {
         width: 150px;
         height: 150px;
       }
       .loader-bg {
-        border: 5px solid #000;
         border: 5px solid #eeeeee;
         display: flex;
         align-items: center;
         justify-content: center;
+        /*box-shadow: inset 2px 2px 20px 0 rgba(0,0,0,0.4);*/
       }
       .text {
         font-size: 20px;
         color: rgb(135, 206, 235);
         font-weight: bold;
       }
-      .loader-spiner {
+      .loader-spinner {
         border: 5px solid rgb(135, 206, 235);
       }
 
     </style>
   </head>
   <body>
-    <div class="loader" id="timer-1" data-timer-maxTime=30>
-        <div class="loader-bg">
-            <div class="text"></div>
-        </div>        
-        <div class="spiner-holder-one animate-0-25-a">
-            <div class="spiner-holder-two animate-0-25-b">
-                <div class="loader-spiner" style=""></div>
+    <div class="page">
+      <h1>Examples : </h1>
+      <div class="circles-container">
+        <div class="loader" id="timer-1" data-timer-maxTime=30 data-timer-dialWidth=10>
+            <div class="loader-bg">
+                <div class="text">00:00:00</div>
+            </div>        
+            <div class="spinner-holder-one animate-0-25-a">
+                <div class="spinner-holder-two animate-0-25-b">
+                    <div class="loader-spinner" style=""></div>
+                </div>
+            </div>
+            <div class="spinner-holder-one animate-25-50-a">
+                <div class="spinner-holder-two animate-25-50-b">
+                    <div class="loader-spinner"></div>
+                </div>
+            </div>
+            <div class="spinner-holder-one animate-50-75-a">
+                <div class="spinner-holder-two animate-50-75-b">
+                    <div class="loader-spinner"></div>
+                </div>
+            </div>
+            <div class="spinner-holder-one animate-75-100-a">
+                <div class="spinner-holder-two animate-75-100-b">
+                    <div class="loader-spinner"></div>
+                </div>
             </div>
         </div>
-        <div class="spiner-holder-one animate-25-50-a">
-            <div class="spiner-holder-two animate-25-50-b">
-                <div class="loader-spiner"></div>
+        <div class="loader timer-2" data-timer-counter=2000>
+            <div class="loader-bg">
+                <div class="text">00:00:00</div>
+            </div>        
+            <div class="spinner-holder-one animate-0-25-a">
+                <div class="spinner-holder-two animate-0-25-b">
+                    <div class="loader-spinner" style=""></div>
+                </div>
+            </div>
+            <div class="spinner-holder-one animate-25-50-a">
+                <div class="spinner-holder-two animate-25-50-b">
+                    <div class="loader-spinner"></div>
+                </div>
+            </div>
+            <div class="spinner-holder-one animate-50-75-a">
+                <div class="spinner-holder-two animate-50-75-b">
+                    <div class="loader-spinner"></div>
+                </div>
+            </div>
+            <div class="spinner-holder-one animate-75-100-a">
+                <div class="spinner-holder-two animate-75-100-b">
+                    <div class="loader-spinner"></div>
+                </div>
             </div>
         </div>
-        <div class="spiner-holder-one animate-50-75-a">
-            <div class="spiner-holder-two animate-50-75-b">
-                <div class="loader-spiner"></div>
+        <div class="loader correctTimer" data-timer-startTime=0 data-timer-dialWidth=20 data-timer-size="250px">
+            <div class="loader-bg">
+                <div class="text">00:00:00</div>
+            </div>        
+            <div class="spinner-holder-one animate-0-25-a">
+                <div class="spinner-holder-two animate-0-25-b">
+                    <div class="loader-spinner" style=""></div>
+                </div>
+            </div>
+            <div class="spinner-holder-one animate-25-50-a">
+                <div class="spinner-holder-two animate-25-50-b">
+                    <div class="loader-spinner"></div>
+                </div>
+            </div>
+            <div class="spinner-holder-one animate-50-75-a">
+                <div class="spinner-holder-two animate-50-75-b">
+                    <div class="loader-spinner"></div>
+                </div>
+            </div>
+            <div class="spinner-holder-one animate-75-100-a">
+                <div class="spinner-holder-two animate-75-100-b">
+                    <div class="loader-spinner"></div>
+                </div>
             </div>
         </div>
-        <div class="spiner-holder-one animate-75-100-a">
-            <div class="spiner-holder-two animate-75-100-b">
-                <div class="loader-spiner"></div>
-            </div>
-        </div>
-    </div>
-    <div class="loader timer-2" data-timer-startTime=1>
-        <div class="loader-bg">
-            <div class="text"></div>
-        </div>        
-        <div class="spiner-holder-one animate-0-25-a">
-            <div class="spiner-holder-two animate-0-25-b">
-                <div class="loader-spiner" style=""></div>
-            </div>
-        </div>
-        <div class="spiner-holder-one animate-25-50-a">
-            <div class="spiner-holder-two animate-25-50-b">
-                <div class="loader-spiner"></div>
-            </div>
-        </div>
-        <div class="spiner-holder-one animate-50-75-a">
-            <div class="spiner-holder-two animate-50-75-b">
-                <div class="loader-spiner"></div>
-            </div>
-        </div>
-        <div class="spiner-holder-one animate-75-100-a">
-            <div class="spiner-holder-two animate-75-100-b">
-                <div class="loader-spiner"></div>
-            </div>
-        </div>
-    </div>
-    <div class="loader correctTimer" data-timer-startTime=0>
-        <div class="loader-bg">
-            <div class="text"></div>
-        </div>        
-        <div class="spiner-holder-one animate-0-25-a">
-            <div class="spiner-holder-two animate-0-25-b">
-                <div class="loader-spiner" style=""></div>
-            </div>
-        </div>
-        <div class="spiner-holder-one animate-25-50-a">
-            <div class="spiner-holder-two animate-25-50-b">
-                <div class="loader-spiner"></div>
-            </div>
-        </div>
-        <div class="spiner-holder-one animate-50-75-a">
-            <div class="spiner-holder-two animate-50-75-b">
-                <div class="loader-spiner"></div>
-            </div>
-        </div>
-        <div class="spiner-holder-one animate-75-100-a">
-            <div class="spiner-holder-two animate-75-100-b">
-                <div class="loader-spiner"></div>
-            </div>
-        </div>
+      </div>
+
     </div>
     <script>
       $(document).ready(function(){
-            var t1 = new timer('{"element" : "#timer-1","maxTime" : 10}');
-            var t2= new timer('{"element" : ".timer-2","maxTime" : 20}');
+            var t1 = new timer('{"element" : "#timer-1","maxTime" : 10,"fontSize" : "14px"}');
+            var t2= new timer('{"element" : ".timer-2","maxTime" : 20,"dialWidth" : 8,"fontColor" : "#777"}');
       });
     </script>
   </body>

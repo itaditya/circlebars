@@ -9,18 +9,31 @@ function timer(prefs){
     this.element = $(prefs.element);
     this.time = 0;
     this.maxTime = 60;
-    var percentage = 0;
-    var that = this;
-    var date = 0;
+    this.counter = 1000;
+    this.dialWidth = 5;
+    this.size = 150;
+    this.fontSize = 20;
+    this.fontColor = "rgb(135, 206, 235)";
+    var percentage = 0, that = this, date = 0;
     var attribs = this.element.find("div")[0].parentNode.dataset;
     this.initialise = function(){
         that.time = parseInt(attribs.timerStarttime) || parseInt(prefs.startTime) || 0;
         that.maxTime = parseInt(attribs.timerMaxtime) || parseInt(prefs.maxTime) || 60;
-    }
+        that.counter = parseInt(attribs.timerCounter) || parseInt(prefs.counter) || 1000;
+        that.dialWidth = parseInt(attribs.timerDialwidth) || parseInt(prefs.dialWidth) || 5;
+        that.size = attribs.timerSize || prefs.size || "150px";
+        that.fontSize = attribs.timerFontsize || prefs.fontSize || "20px";
+        that.fontColor = attribs.timerFontcolor || prefs.fontColor || "rgb(135, 206, 235)";
+
+        that.element.find(".loader-bg").css("border-width",that.dialWidth+"px");
+        that.element.find(".loader-spinner").css("border-width",that.dialWidth+"px");
+        that.element.css({"width":that.size,"height":that.size});
+        that.element.find(".loader-bg .text").css({"font-size":that.fontSize,"color":that.fontColor});
+    };
     this.initialise();
     this.timer = setInterval(function(){
         if(that.time < that.maxTime){
-            that.time += 1;
+            that.time += parseInt(that.counter/1000);
             percentage = (that.time*100)/that.maxTime;
             that.renderProgress(percentage);
             date = new Date(null);
@@ -31,7 +44,7 @@ function timer(prefs){
         else{
             clearInterval(that.timer);
         }
-    },1000);
+    },(this.counter));
     this.renderProgress = function(progress) {
         progress = Math.floor(progress);
         var angle = 0;

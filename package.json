@@ -1,0 +1,22 @@
+{
+  "name": "circlebars",
+  "version": "1.0.0",
+  "description": "a jQuery plugin for circular progress bars and countdown timers",
+  "main": "dist/circle-min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itaditya/correctTime.git"
+  },
+  "keywords": [
+    "progress-bar",
+    "timer",
+    "round-bar",
+    "jquery"
+  ],
+  "author": "itaditya <adityaa803@gmail.com> (http://www.itaditya.github.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itaditya/correctTime/issues"
+  },
+  "homepage": "https://github.com/itaditya/correctTime#readme"
+}
