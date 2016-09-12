@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Demo | Circle Bars</title>
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="assets/jquery.min.js"></script>
@@ -19,7 +19,7 @@
     <div class="page">
       <h1>Examples : </h1>
       <div class="circles-container">
-        <div class="loader" id="circle-1" data-circle-maxTime=30 data-circle-dialWidth=10 data-circle-skin="white">
+        <div class="loader" id="circle-1" >
             <div class="loader-bg">
                 <div class="text">00:00:00</div>
             </div>
@@ -39,9 +39,8 @@
     </div>
     <script>
       $(document).ready(function(){
-        var t1 = new circlebar({
-            element : "#circle-1",
-            maxTime : 10,
+        $("#circle-1").circlebar({
+            maxTime : 5,
             fontSize : "14px"
         });
         var t2= new circlebar({
@@ -56,4 +55,3 @@
     </script>
   </body>
 </html>
-  
