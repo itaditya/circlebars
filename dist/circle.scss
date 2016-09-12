@@ -1,9 +1,21 @@
 .loader {
   position: relative;
-  width: 50px;
-  height: 50px;
   float: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+}
+
+.spinner-holder-one, .spinner-holder-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: 0 0;
   box-sizing: border-box;
 }
 
@@ -11,37 +23,31 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 5px solid rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
+  border: 5px solid #eee;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .spinner-holder-one {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
   width: 50%;
   height: 50%;
-  background: transparent;
-  box-sizing: border-box;
 }
 
 .spinner-holder-two {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
   width: 100%;
   height: 100%;
-  background: transparent;
-  box-sizing: border-box;
 }
 
 .loader-spinner {
   width: 200%;
   height: 200%;
   border-radius: 50%;
-  border: 5px solid rgba(255, 255, 255, 0.3);
+  border: 5px solid #87ceeb;
   box-sizing: border-box;
 }
 
@@ -76,7 +82,7 @@
 }
 
 .animate-75-100-a {
-  transform: rotate(0deg);
+  transform: rotate(0);
   transform-origin: 100% 100%;
 }
 
@@ -87,5 +93,7 @@
 
 .text {
   text-align: center;
-  font-size: 12px;
+  font-size: 20px;
+  color: #87ceeb;
+  font-weight: 700;
 }

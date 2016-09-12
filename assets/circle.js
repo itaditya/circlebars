@@ -16,7 +16,7 @@ function circlebar(prefs){
     this.size = 150;
     this.fontSize = 20;
     this.fontColor = "rgb(135, 206, 235)";
-    this.skin = ""
+    this.skin = "";
     var percentage = 0, that = this, date = 0;
     // var attribs = this.element.find("div")[0].parentNode.dataset;
     var attribs = this.element[0].dataset;
