@@ -1,4 +1,4 @@
-.loader{
+.loader {
     position: relative;
     width: 50px;
     height: 50px;
@@ -6,16 +6,14 @@
     user-select: none;
     box-sizing: border-box;
 }
-.loader-bg
-{
+.loader-bg {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
 }
-.spinner-holder-one
-{
+.spinner-holder-one {
     position: absolute;
     top:0;
     left:0;
@@ -25,8 +23,7 @@
     background: transparent;
     box-sizing: border-box;
 }
-.spinner-holder-two
-{
+.spinner-holder-two {
     position: absolute;
     top:0;
     left:0;
@@ -36,56 +33,46 @@
     background: transparent;
     box-sizing: border-box;
 }
-.loader-spinner
-{
+.loader-spinner {
     width: 200%;
     height: 200%;
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
 }  
-  .animate-0-25-a
-{
+  .animate-0-25-a {
     transform: rotate(90deg);
     transform-origin: 100% 100%;
 }
-.animate-0-25-b
-{
+.animate-0-25-b {
     transform: rotate(-90deg);
     transform-origin: 100% 100%;
 }
-.animate-25-50-a
-{
+.animate-25-50-a {
     transform: rotate(180deg);
     transform-origin: 100% 100%;
 }
-.animate-25-50-b
-{
+.animate-25-50-b {
     transform: rotate(-90deg);
     transform-origin: 100% 100%;
 }
-.animate-50-75-a
-{
+.animate-50-75-a {
     transform: rotate(270deg);
     transform-origin: 100% 100%;
 }
-.animate-50-75-b
-{
+.animate-50-75-b {
     transform: rotate(-90deg);
     transform-origin:100% 100%;
 }
-.animate-75-100-a
-{
+.animate-75-100-a {
     transform: rotate(0deg);
     transform-origin: 100% 100%;
 }
-.animate-75-100-b
-{
+.animate-75-100-b {
     transform: rotate(-90deg);
     transform-origin: 100% 100%;
 }
-.text
-{
+.text {
     text-align: center;
     font-size: 12px;     
 }

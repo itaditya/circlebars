@@ -1,0 +1,26 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
+  min-width: 100%;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  min-height: 1005;
+  min-width: 100%;
+}
+.page > h1 {
+  font-weight: 300 !important;
+
+}
+.circles-container {
+  min-height: 400px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;  
+}

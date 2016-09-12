@@ -1,12 +1,15 @@
 $(document).ready(function(){
-    var prefs = '{"element" : ".correctTimer"}';
-    $('.correctTimer').each(function (index, value) {
+    var prefs = {
+        element : ".correctTimer"
+    };
+    $('.correctTimer').each(function () {
         new timer(prefs);
     });
 });
 function timer(prefs){
-    prefs = JSON.parse(prefs);
     this.element = $(prefs.element);
+    console.log(this.element);
+    this.element.append('<div class="spinner-holder-one animate-0-25-a"><div class="spinner-holder-two animate-0-25-b"><div class="loader-spinner" style=""></div></div></div><div class="spinner-holder-one animate-25-50-a"><div class="spinner-holder-two animate-25-50-b"><div class="loader-spinner"></div></div></div><div class="spinner-holder-one animate-50-75-a"><div class="spinner-holder-two animate-50-75-b"><div class="loader-spinner"></div></div></div><div class="spinner-holder-one animate-75-100-a"><div class="spinner-holder-two animate-75-100-b"><div class="loader-spinner"></div></div></div>');
     this.time = 0;
     this.maxTime = 60;
     this.counter = 1000;
