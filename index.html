@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>Demo | Correct Time</title>
+    <title>Demo | Circle Bars</title>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="assets/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/circle.css">
     <link rel="stylesheet" type="text/css" href="assets/demo.css">
-    <link rel="stylesheet" type="text/css" href="assets/simplecircle.css">
+    <link rel="stylesheet" type="text/css" href="assets/skins/cobaltcircle.css">
+    <link rel="stylesheet" type="text/css" href="assets/skins/firecircle.css">
+    <link rel="stylesheet" type="text/css" href="assets/skins/whitecircle.css">
+    <link rel="stylesheet" type="text/css" href="assets/skins/simplecircle.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <script type="text/javascript" src="assets/circle.js"></script>
   </head>
@@ -17,17 +19,17 @@
     <div class="page">
       <h1>Examples : </h1>
       <div class="circles-container">
-        <div class="loader" id="timer-1" data-timer-maxTime=30 data-timer-dialWidth=10>
+        <div class="loader" id="circle-1" data-circle-maxTime=30 data-circle-dialWidth=10 data-circle-skin="white">
             <div class="loader-bg">
                 <div class="text">00:00:00</div>
             </div>
         </div>
-        <div class="loader timer-2" data-timer-counter=2000>
+        <div class="loader circle-2" data-circle-counter=1000 data-circle-size="300px">
             <div class="loader-bg">
                 <div class="text">00:00:00</div>
             </div>
         </div>
-        <div class="loader correctTimer" data-timer-startTime=0 data-timer-dialWidth=20 data-timer-size="250px">
+        <div class="loader circlebar simple" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
             <div class="loader-bg">
                 <div class="text">00:00:00</div>
             </div>
@@ -37,16 +39,18 @@
     </div>
     <script>
       $(document).ready(function(){
-        var t1 = new timer({
-            element : "#timer-1",
+        var t1 = new circlebar({
+            element : "#circle-1",
             maxTime : 10,
             fontSize : "14px"
         });
-        var t2= new timer({
-            element : ".timer-2",
+        var t2= new circlebar({
+            element : ".circle-2",
             maxTime : 20,
-            dialWidth : 8,
-            fontColor : "#777"
+            dialWidth : 40,
+            fontColor : "#777",
+            fontSize : "30px",
+            skin : "fire"
         });
       });
     </script>

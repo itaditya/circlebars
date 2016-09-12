@@ -1,8 +1,6 @@
 body {
   padding: 0px;
   margin: 0px;
-  min-height: 100vh;
-  min-width: 100%;
 }
 .page {
   display: flex;
@@ -10,11 +8,14 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Lato', sans-serif;
-  min-height: 1005;
+  min-height: 100vh;
   min-width: 100%;
+  background: #222;
 }
 .page > h1 {
   font-weight: 300 !important;
+  color: #fff;
+  font-size: 40px;
 
 }
 .circles-container {

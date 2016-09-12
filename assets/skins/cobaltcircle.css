@@ -1,0 +1,11 @@
+.cobalt .loader-bg {
+  border-color: #ccc;
+  /*box-shadow: inset 2px 2px 20px 0 rgba(0,0,0,0.4) !important;*/
+}
+.cobalt .text {
+  font-size: 20px;
+  color: #333 !important;
+}
+.cobalt .loader-spinner {
+  border-color: #333;
+}
