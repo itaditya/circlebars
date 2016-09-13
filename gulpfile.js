@@ -27,7 +27,6 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(gulp.dest('./dist'));
 });
-
 var bs = require('browser-sync').create(); // create a browser sync instance.
 
 gulp.task('browser-sync', function() {
@@ -37,11 +36,12 @@ gulp.task('browser-sync', function() {
         }
     });
 });
-gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch(["*.html","*.js","*.css"]).on('change', bs.reload);
-});
-gulp.task('default', ['scripts', 'styles', 'lint'], function() {
+// gulp.task('watch', ['browser-sync'], function () {
+//     gulp.watch("*.html").on('change', bs.reload);
+// });
+gulp.task('default', ['scripts', 'styles', 'lint','browser-sync'], function() {
 
+  gulp.watch(["*.html","*.js"]).on('change', bs.reload);
   // watch for JS changes
   gulp.watch('./assets/*.js', function() {
     gulp.run('lint', 'scripts');
