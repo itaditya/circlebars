@@ -19,22 +19,17 @@
     <div class="page">
       <h1>Examples: </h1>
       <div class="circles-container">
-        <div class="loader" id="circle-1" data-circle-maxTime=30 data-circle-dialWidth=10 data-circle-skin="white">
+        <div id="circle-1" data-circle-dialWidth=10 data-circle-skin="white">
             <div class="loader-bg">
                 <div class="text">00:00:00</div>
             </div>
         </div>
-        <div class="loader circle-2" data-circle-counter=1000 data-circle-size="300px">
+        <div class="circle-2" data-circle-counter=1000 data-circle-size="300px">
             <div class="loader-bg">
                 <div class="text">00:00:00</div>
             </div>
         </div>
-        <div class="loader circlebar" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
-            <div class="loader-bg">
-                <div class="text">00:00:00</div>
-            </div>
-        </div>
-        <div class="loader circle-4" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
+        <div class="circlebar" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
             <div class="loader-bg">
                 <div class="text">00:00:00</div>
             </div>
@@ -44,10 +39,10 @@
     </div>
     <script>
       $(document).ready(function(){
-        var t1 = new Circlebar({
-            element : "#circle-1",
-            maxTime : 10,
-            fontSize : "14px"
+        $("#circle-1").Circlebar({
+            maxTime : 20,
+            fontSize : "14px",
+            triggerPercentage : true
         });
         var t2= new Circlebar({
             element : ".circle-2",
@@ -56,11 +51,6 @@
             fontColor : "#777",
             fontSize : "30px",
             skin : "fire"
-        });
-        $(".circle-4").Circlebar({
-            maxTime : 5,
-            fontSize : "14px",
-            skin : "white"
         });
       });
     </script>

@@ -11,3 +11,9 @@
 .white .loader-spinner {
   border-color: #fff;
 }
+.white.circle-loaded-75 .text {
+  color: #ddd !important;
+}
+.white.circle-loaded-75 .loader-spinner {
+  border-color: #ddd;
+}

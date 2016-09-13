@@ -9,14 +9,7 @@ $(document).ready(function(){
 function Circlebar(prefs){
     this.element = $(prefs.element);
     this.element.append('<div class="spinner-holder-one animate-0-25-a"><div class="spinner-holder-two animate-0-25-b"><div class="loader-spinner" style=""></div></div></div><div class="spinner-holder-one animate-25-50-a"><div class="spinner-holder-two animate-25-50-b"><div class="loader-spinner"></div></div></div><div class="spinner-holder-one animate-50-75-a"><div class="spinner-holder-two animate-50-75-b"><div class="loader-spinner"></div></div></div><div class="spinner-holder-one animate-75-100-a"><div class="spinner-holder-two animate-75-100-b"><div class="loader-spinner"></div></div></div>');
-    this.time = 0;
-    this.maxTime = 60;
-    this.counter = 1000;
-    this.dialWidth = 5;
-    this.size = 150;
-    this.fontSize = 20;
-    this.fontColor = "rgb(135, 206, 235)";
-    this.skin = "";
+    this.time,this.maxTime,this.counter,this.dialWidth,this.size,this.fontSize,this.fontColor,this.skin,this.triggerPercentage;
     var percentage = 0, that = this, date = 0;
     // var attribs = this.element.find("div")[0].parentNode.dataset;
     var attribs = this.element[0].dataset;
@@ -29,13 +22,15 @@ function Circlebar(prefs){
         that.fontSize = attribs.circleFontsize || prefs.fontSize || "20px";
         that.fontColor = attribs.circleFontcolor || prefs.fontColor || "rgb(135, 206, 235)";
         that.skin = attribs.circleSkin || prefs.skin || " ";
+        that.triggerPercentage = attribs.circleTriggerpercentage || prefs.triggerPercentage || true;
 
+
+        that.element.addClass(that.skin).addClass('loader');
         that.element.find(".loader-bg").css("border-width",that.dialWidth+"px");
         that.element.find(".loader-spinner").css("border-width",that.dialWidth+"px");
         that.element.css({"width":that.size,"height":that.size});
         that.element.find(".loader-bg .text")
             .css({"font-size":that.fontSize,"color":that.fontColor});
-        that.element.addClass(that.skin);
     };
     this.initialise();
     this.timer = setInterval(function(){
@@ -58,22 +53,35 @@ function Circlebar(prefs){
         if(progress<25){
             angle = -90 + (progress/100)*360;
             that.element.find(".animate-0-25-b").css("transform","rotate("+angle+"deg)");
+            if(that.triggerPercentage){
+                that.element.addClass('circle-loaded-0');
+            }
+
         }
         else if(progress>=25 && progress<50){
             angle = -90 + ((progress-25)/100)*360;
             that.element.find(".animate-0-25-b").css("transform","rotate(0deg)");
             that.element.find(".animate-25-50-b").css("transform","rotate("+angle+"deg)");
+            if(that.triggerPercentage){
+                that.element.removeClass('circle-loaded-0').addClass('circle-loaded-25');
+            }
         }
         else if(progress>=50 && progress<75){
             angle = -90 + ((progress-50)/100)*360;
             that.element.find(".animate-25-50-b, .animate-0-25-b").css("transform","rotate(0deg)");
             that.element.find(".animate-50-75-b").css("transform","rotate("+angle+"deg)");
+            if(that.triggerPercentage){
+                that.element.removeClass('circle-loaded-25').addClass('circle-loaded-50');
+            }
         }
         else if(progress>=75 && progress<=100){
             angle = -90 + ((progress-75)/100)*360;
             that.element.find(".animate-50-75-b, .animate-25-50-b, .animate-0-25-b")
                                                   .css("transform","rotate(0deg)");
             that.element.find(".animate-75-100-b").css("transform","rotate("+angle+"deg)");
+            if(that.triggerPercentage){
+                that.element.removeClass('circle-loaded-50').addClass('circle-loaded-75');
+            }
         }
     };
 }
@@ -81,7 +89,6 @@ function Circlebar(prefs){
 (function( $ ){
    $.fn.Circlebar = function(options) {
         options.element = this.selector;
-        console.log(options);
         new Circlebar(options);
    };
 })( jQuery );
