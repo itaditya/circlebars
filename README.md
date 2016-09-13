@@ -56,7 +56,7 @@ Option 2. -- By adding a .circlebar class to the element.
 
 #Example
 ```
-    <div class="correctTimer"></div>
+    <div class="circlebar"></div>
 ```
 
 Enjoy and keep converting caffeine to code !!
