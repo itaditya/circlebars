@@ -20,6 +20,12 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('skins', function() {
+  gulp.src(['./assets/skins/*.css'])
+    .pipe(autoprefix('last 2 versions'))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('./dist/skins'));
+});
 // JS concat, strip debugging and minify
 gulp.task('scripts', function() {
   gulp.src(['./assets/*.js'])
@@ -39,9 +45,9 @@ gulp.task('browser-sync', function() {
 // gulp.task('watch', ['browser-sync'], function () {
 //     gulp.watch("*.html").on('change', bs.reload);
 // });
-gulp.task('default', ['scripts', 'styles', 'lint','browser-sync'], function() {
+gulp.task('default', ['scripts', 'styles','skins', 'lint','browser-sync'], function() {
 
-  gulp.watch(["*.html","*.js"]).on('change', bs.reload);
+  gulp.watch(["*.html","*.js",".css"]).on('change', bs.reload);
   // watch for JS changes
   gulp.watch('./assets/*.js', function() {
     gulp.run('lint', 'scripts');

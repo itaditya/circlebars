@@ -1,4 +1,4 @@
-Circle Bars
+jQuery Knob
 =============
 >Circle Bars is a Jquery plugin which is used to add circular countdown timers or progress bars in your project easily.
 

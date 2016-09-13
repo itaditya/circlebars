@@ -25,3 +25,10 @@ body {
   align-items: center;
   justify-content: space-around;  
 }
+@media screen and (max-width: 400px){
+  .circles-container {
+    min-height: 820px;
+    width: 100%;
+    flex-direction: column;
+  }
+}
