@@ -77,3 +77,11 @@ function circlebar(prefs){
         }
     };
 }
+
+(function( $ ){
+   $.fn.circlebar = function(options) {
+        options.element = this.selector;
+        console.log(options);
+        new circlebar(options);
+   }
+})( jQuery );
