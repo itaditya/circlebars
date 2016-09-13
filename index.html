@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Demo | Circle Bars</title>
-
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="assets/jquery.min.js"></script>
@@ -17,9 +17,9 @@
   </head>
   <body>
     <div class="page">
-      <h1>Examples : </h1>
+      <h1>Examples: </h1>
       <div class="circles-container">
-        <div class="loader" id="circle-1" >
+        <div class="loader" id="circle-1" data-circle-maxTime=30 data-circle-dialWidth=10 data-circle-skin="white">
             <div class="loader-bg">
                 <div class="text">00:00:00</div>
             </div>
@@ -29,7 +29,12 @@
                 <div class="text">00:00:00</div>
             </div>
         </div>
-        <div class="loader circlebar simple" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
+        <div class="loader circlebar" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
+            <div class="loader-bg">
+                <div class="text">00:00:00</div>
+            </div>
+        </div>
+        <div class="loader circle-4" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
             <div class="loader-bg">
                 <div class="text">00:00:00</div>
             </div>
@@ -39,11 +44,12 @@
     </div>
     <script>
       $(document).ready(function(){
-        $("#circle-1").circlebar({
-            maxTime : 5,
+        var t1 = new Circlebar({
+            element : "#circle-1",
+            maxTime : 10,
             fontSize : "14px"
         });
-        var t2= new circlebar({
+        var t2= new Circlebar({
             element : ".circle-2",
             maxTime : 20,
             dialWidth : 40,
@@ -51,7 +57,13 @@
             fontSize : "30px",
             skin : "fire"
         });
+        $(".circle-4").Circlebar({
+            maxTime : 5,
+            fontSize : "14px",
+            skin : "white"
+        });
       });
     </script>
   </body>
 </html>
+  

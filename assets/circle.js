@@ -3,10 +3,10 @@ $(document).ready(function(){
         element : ".circlebar"
     };
     $('.circlebar').each(function () {
-        new circlebar(prefs);
+        new Circlebar(prefs);
     });
 });
-function circlebar(prefs){
+function Circlebar(prefs){
     this.element = $(prefs.element);
     this.element.append('<div class="spinner-holder-one animate-0-25-a"><div class="spinner-holder-two animate-0-25-b"><div class="loader-spinner" style=""></div></div></div><div class="spinner-holder-one animate-25-50-a"><div class="spinner-holder-two animate-25-50-b"><div class="loader-spinner"></div></div></div><div class="spinner-holder-one animate-50-75-a"><div class="spinner-holder-two animate-50-75-b"><div class="loader-spinner"></div></div></div><div class="spinner-holder-one animate-75-100-a"><div class="spinner-holder-two animate-75-100-b"><div class="loader-spinner"></div></div></div>');
     this.time = 0;
@@ -79,9 +79,9 @@ function circlebar(prefs){
 }
 
 (function( $ ){
-   $.fn.circlebar = function(options) {
+   $.fn.Circlebar = function(options) {
         options.element = this.selector;
         console.log(options);
-        new circlebar(options);
-   }
+        new Circlebar(options);
+   };
 })( jQuery );
