@@ -27,15 +27,27 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(gulp.dest('./dist'));
 });
-gulp.task('default', ['scripts', 'styles', 'lint'], function() {
+var bs = require('browser-sync').create(); // create a browser sync instance.
 
-  // watch for JS changes
-  gulp.watch('./assets/*.js', function() {
-    gulp.run('lint', 'scripts');
-  });
+gulp.task('browser-sync', function() {
+    bs.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+gulp.task('watch', ['browser-sync'], function () {
+    gulp.watch("*.html").on('change', bs.reload);
+});
+gulp.task('default', ['scripts', 'styles', 'lint','browser-sync'], function() {
 
-  // watch for CSS changes
-  gulp.watch('./assets/*.css', function() {
-    gulp.run('styles');
-  });
+  // // watch for JS changes
+  // gulp.watch('./assets/*.js', function() {
+  //   gulp.run('lint', 'scripts');
+  // });
+
+  // // watch for CSS changes
+  // gulp.watch('./assets/*.css', function() {
+  //   gulp.run('styles');
+  // });
 });
