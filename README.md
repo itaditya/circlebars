@@ -4,7 +4,9 @@ Circle Bars
 
 - implemented with css; no canvas, png or jpg sprites mess.
 - highly customisable with various designed skins.
-- less than 2KB when minified..
+- less than 2KB when minified.
+- SASS supported.
+- optimised and production ready code in dist/ folder. 
 
 Example
 -------
@@ -56,7 +58,7 @@ Options are provided as attributes 'data-circle-option':
 <div id="circle-1" data-circle-dialWidth=10 data-circle-skin="white"></div>
 ```
 
-... or in the "Circlebar()" call :
+ or in the "Circlebar()" call :
 
 ```javascript
 $("#circle-1").Circlebar({
