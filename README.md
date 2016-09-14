@@ -111,6 +111,10 @@ and
 </div>
 ```
 
+
+> Note that you can put what ever content you feel like inside `html <div class="text"></div> ` .
+It can have text, icons, images, etc. 
+
 Supported browser
 -------
 

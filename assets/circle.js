@@ -9,13 +9,12 @@ $(document).ready(function(){
 function Circlebar(prefs){
     this.element = $(prefs.element);
     this.element.append('<div class="spinner-holder-one animate-0-25-a"><div class="spinner-holder-two animate-0-25-b"><div class="loader-spinner" style=""></div></div></div><div class="spinner-holder-one animate-25-50-a"><div class="spinner-holder-two animate-25-50-b"><div class="loader-spinner"></div></div></div><div class="spinner-holder-one animate-50-75-a"><div class="spinner-holder-two animate-50-75-b"><div class="loader-spinner"></div></div></div><div class="spinner-holder-one animate-75-100-a"><div class="spinner-holder-two animate-75-100-b"><div class="loader-spinner"></div></div></div>');
-    this.time,this.maxTime,this.counter,this.dialWidth,this.size,this.fontSize,this.fontColor,this.skin,this.triggerPercentage;
-    var percentage = 0, that = this, date = 0;
+    this.value,this.maxValue,this.counter,this.dialWidth,this.size,this.fontSize,this.fontColor,this.skin,this.triggerPercentage,this.type,this.timer;
     // var attribs = this.element.find("div")[0].parentNode.dataset;
-    var attribs = this.element[0].dataset;
+    var attribs = this.element[0].dataset,that = this;
     this.initialise = function(){
-        that.time = parseInt(attribs.circleStarttime) || parseInt(prefs.startTime) || 0;
-        that.maxTime = parseInt(attribs.circleMaxtime) || parseInt(prefs.maxTime) || 60;
+        that.value = parseInt(attribs.circleStarttime) || parseInt(prefs.startTime) || 0;
+        that.maxValue = parseInt(attribs.circleMaxtime) || parseInt(prefs.maxValue) || 60;
         that.counter = parseInt(attribs.circleCounter) || parseInt(prefs.counter) || 1000;
         that.dialWidth = parseInt(attribs.circleDialwidth) || parseInt(prefs.dialWidth) || 5;
         that.size = attribs.circleSize || prefs.size || "150px";
@@ -23,6 +22,7 @@ function Circlebar(prefs){
         that.fontColor = attribs.circleFontcolor || prefs.fontColor || "rgb(135, 206, 235)";
         that.skin = attribs.circleSkin || prefs.skin || " ";
         that.triggerPercentage = attribs.circleTriggerpercentage || prefs.triggerPercentage || true;
+        that.type = attribs.circleType || prefs.type || "timer";
 
 
         that.element.addClass(that.skin).addClass('loader');
@@ -33,20 +33,6 @@ function Circlebar(prefs){
             .css({"font-size":that.fontSize,"color":that.fontColor});
     };
     this.initialise();
-    this.timer = setInterval(function(){
-        if(that.time < that.maxTime){
-            that.time += parseInt(that.counter/1000);
-            percentage = (that.time*100)/that.maxTime;
-            that.renderProgress(percentage);
-            date = new Date(null);
-            date.setSeconds(that.time); // specify value for seconds here
-            that.element.find(".text").html(date.toISOString().substr(11, 8));
-            that.element.find(".text")[0].dataset.time = that.time;
-        }
-        else{
-            clearInterval(that.timer);
-        }
-    },(this.counter));
     this.renderProgress = function(progress) {
         progress = Math.floor(progress);
         var angle = 0;
@@ -84,6 +70,47 @@ function Circlebar(prefs){
             }
         }
     };
+    this.textFilter = function(){
+        var percentage = 0, date = 0,text = that.element.find(".text");
+        if(that.type == "timer"){
+            that.timer = setInterval(function(){
+                if(that.value < that.maxValue){
+                    that.value += parseInt(that.counter/1000);
+                    percentage = (that.value*100)/that.maxValue;
+                    that.renderProgress(percentage);
+                    text[0].dataset.value = that.value;
+                    date = new Date(null);
+                    date.setSeconds(that.value); // specify value for seconds here
+                    text.html(date.toISOString().substr(11, 8));
+                }
+                else{
+                    clearInterval(that.timer);
+                }
+            },(that.counter));
+        }
+        if(that.type == "progress"){
+            function setDeceleratingTimeout(factor, times){
+              var internalCallback = function(counter){
+                return function(){
+                  if (percentage < that.maxValue){
+                    setTimeout( internalCallback, ++counter * factor );
+                    that.value += 1;
+                    percentage = Math.floor((that.value*100)/that.maxValue);
+                    that.renderProgress(percentage);
+                    text[0].dataset.value = percentage;
+                    text.html(percentage + "%");
+                  }
+                }
+              }(times, 0);
+              setTimeout( internalCallback, factor);
+            };
+
+            // console.log() requires firebug    
+            setDeceleratingTimeout(0.1, 100);
+        }
+
+    }
+    this.textFilter();
 }
 
 (function( $ ){
