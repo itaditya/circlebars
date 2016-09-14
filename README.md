@@ -117,7 +117,7 @@ and
 ```
 
 
-> Note that you can put any content inside <div class="text"></div> ` like text, icons, images, etc. 
+> Note that you can put any content inside` <div class="text"></div> ` like text, icons, images, etc. 
 
 Supported browser
 -------
