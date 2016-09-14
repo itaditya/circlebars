@@ -5,12 +5,9 @@ Circle Bars
 - implemented with css; no canvas, png or jpg sprites mess.
 - highly customisable with various designed skins.
 - less than 2KB when minified.
-<<<<<<< HEAD
 - SASS supported.
 - optimised and production ready code in dist/ folder. 
-=======
 - SASS support also.
->>>>>>> 912d5775c72a3cce8ce5182e1b03e894de14fc8b
 
 Example
 -------
@@ -93,11 +90,10 @@ Example
 -------
 
 ```html
-<div class="circles-container">
-  <div id="circle-1" data-circle-dialWidth=10 data-circle-skin="white">
-      <div class="loader-bg">
-          <div class="text">00:00:00</div>
-      </div>
+ <div id="circle-1" data-circle-dialWidth=10 data-circle-skin="white">
+    <div class="loader-bg">
+      <div class="text">00:00:00</div>
+    </div>
 </div>
 
 $("#circle-1").Circlebar({
