@@ -1,0 +1,19 @@
+/*Add attribute data-circle-skin = "purple" to the div */
+/*Note :- This looks best on dark backgrounds*/
+.purple .loader-bg {
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: inset 2px 2px 20px 0 rgba(0,0,0,0.1) !important;
+}
+.purple .text {
+  font-size: 20px;
+  color: #7b708d !important;
+}
+.purple .loader-spinner {
+  border-color: #7b708d;
+}
+.purple.circle-loaded-75 .text {
+  color: #a186ce !important;
+}
+.purple.circle-loaded-75 .loader-spinner {
+  border-color: #a186ce;
+}

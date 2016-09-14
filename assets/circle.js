@@ -21,7 +21,7 @@ function Circlebar(prefs){
         that.fontSize = attribs.circleFontsize || prefs.fontSize || "20px";
         that.fontColor = attribs.circleFontcolor || prefs.fontColor || "rgb(135, 206, 235)";
         that.skin = attribs.circleSkin || prefs.skin || " ";
-        that.triggerPercentage = attribs.circleTriggerpercentage || prefs.triggerPercentage || true;
+        that.triggerPercentage = attribs.circleTriggerpercentage || prefs.triggerPercentage || false;
         that.type = attribs.circleType || prefs.type || "timer";
 
 

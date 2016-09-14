@@ -1,0 +1,19 @@
+/*Add attribute data-circle-skin = "blue" to the div */
+/*Note :- This looks best on dark backgrounds*/
+.blue .loader-bg {
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: inset 2px 2px 20px 0 rgba(0,0,0,0.1) !important;
+}
+.blue .text {
+  font-size: 20px;
+  color: #3ba8b6 !important;
+}
+.blue .loader-spinner {
+  border-color: #3ba8b6;
+}
+.blue.circle-loaded-75 .text {
+  color: #57a3d8 !important;
+}
+.blue.circle-loaded-75 .loader-spinner {
+  border-color: #57a3d8;
+}

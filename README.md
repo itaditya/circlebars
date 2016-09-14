@@ -5,7 +5,6 @@ Circle Bars
 - implemented with css; no canvas, png or jpg sprites mess.
 - highly customisable with various designed skins.
 - less than 2KB when minified.
-- SASS supported.
 - optimised and production ready code in dist/ folder. 
 - SASS support also.
 
