@@ -26,7 +26,7 @@
         </div>
         <div class="circle-2" data-circle-counter=1000 data-circle-size="300px">
             <div class="loader-bg">
-                <div class="text">00:00:00</div>
+                <div class="text">0%</div>
             </div>
         </div>
         <div class="circlebar" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
@@ -48,13 +48,14 @@
     <script>
       $(document).ready(function(){
         $("#circle-1").Circlebar({
-            maxTime : 20,
+            maxValue : 20,
             fontSize : "14px",
             triggerPercentage : true
         });
         var t2= new Circlebar({
             element : ".circle-2",
-            maxTime : 20,
+            maxValue : 85,
+            type : "progress",
             dialWidth : 40,
             fontColor : "#777",
             fontSize : "30px",
@@ -63,7 +64,7 @@
 
         new Circlebar({
             element : "#circle-3",
-            maxTime : 20,
+            maxValue : 20,
             size : "240px",
             fontSize : "30px",
         });
