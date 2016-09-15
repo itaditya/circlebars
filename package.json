@@ -1,6 +1,6 @@
 {
   "name": "circlebars",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a jQuery plugin for circular progress bars and countdown timers",
   "main": "dist/circle-min.js",
   "repository": {
