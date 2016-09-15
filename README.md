@@ -62,7 +62,7 @@ Options are provided as attributes 'data-circle-option':
 
 ```javascript
 $("#circle-1").Circlebar({
-    maxTime : 20,
+    maxValue : 20,
     fontSize : "14px",
     triggerPercentage : true
 });
@@ -71,11 +71,13 @@ $("#circle-1").Circlebar({
 
 The following options are supported :
 
+- Note : value and maxValue options are common for both (timer and progressbar) but vary slightly in essence to both.
+
 Behaviors :
-* time : starting time or value | default = 0 | integer 
-* maxTime : the time till which it progresses | default = 60 | integer
-* counter : the time in which progress increase by 1 | default = 1000 | integer (1000 == 1sec)
-* triggerPercentage : should the circle alters according to progress level | default = true
+* value : starting time for timer or initial value of progressbar | default = 0 | integer 
+* maxValue : the max time for timer to display or the value till which circlebar progresses | default = 60 | integer
+* counter : the time in which timer increase by 1s | default = 1000 | integer (1000 == 1sec)
+* triggerPercentage : should the circles styling alters according to progress level | default = false | boolean
 
 UI :
 
@@ -96,7 +98,7 @@ Example
 </div>
 
 $("#circle-1").Circlebar({
-    maxTime : 20,
+    maxValue : 20,
     fontSize : "14px",
     triggerPercentage : true
 });
