@@ -6,7 +6,8 @@ import subprocess
 cmds = [
     "git add .",
     "git commit -m ",
-    "git push"
+    "git push",
+    "surge"
 ]
 print("Enter a commit message or $ for manual git")
 commitMessage = "'" + raw_input().strip() + "'"
