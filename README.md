@@ -2,7 +2,7 @@ Circle Bars
 =============
 >Circle Bars is a Jquery plugin which is used to add circular countdown timers or progress bars in your project easily.
 
-[![npm](https://img.shields.io/npm/dm/localeval.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/circlebars)
+[![npm](https://img.shields.io/npm/dm/circlebars.svg?style=plastic)](https://www.npmjs.com/package/circlebars)
 
 - implemented with css; no canvas, png or jpg sprites mess.
 - highly customisable with various designed skins.
