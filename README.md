@@ -2,6 +2,8 @@ Circle Bars
 =============
 >Circle Bars is a Jquery plugin which is used to add circular countdown timers or progress bars in your project easily.
 
+[![npm](https://img.shields.io/npm/dm/localeval.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/circlebars)
+
 - implemented with css; no canvas, png or jpg sprites mess.
 - highly customisable with various designed skins.
 - less than 2KB when minified.
@@ -74,7 +76,7 @@ The following options are supported :
 - Note : value and maxValue options are common for both (timer and progressbar) but vary slightly in essence to both.
 
 Behaviors :
-* value : starting time for timer or initial value of progressbar | default = 0 | integer 
+* startValue : starting time for timer or initial value of progressbar | default = 0 | integer 
 * maxValue : the max time for timer to display or the value till which circlebar progresses | default = 60 | integer
 * counter : the time in which timer increase by 1s | default = 1000 | integer (1000 == 1sec)
 * triggerPercentage : should the circles styling alters according to progress level | default = false | boolean
@@ -106,7 +108,7 @@ $("#circle-1").Circlebar({
 and 
 
 ```html
-<div class="circlebar" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
+<div class="circlebar" data-circle-startValue=0 data-circle-dialWidth=20 data-circle-size="250px">
     <div class="loader-bg">
         <div class="text">00:00:00</div>
     </div>

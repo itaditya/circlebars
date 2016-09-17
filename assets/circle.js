@@ -13,7 +13,7 @@ function Circlebar(prefs){
     // var attribs = this.element.find("div")[0].parentNode.dataset;
     var attribs = this.element[0].dataset,that = this;
     this.initialise = function(){
-        that.value = parseInt(attribs.circleStarttime) || parseInt(prefs.startTime) || 0;
+        that.startValue = parseInt(attribs.circleStartvalue) || parseInt(prefs.startValue) || 0;
         that.maxValue = parseInt(attribs.circleMaxtime) || parseInt(prefs.maxValue) || 60;
         that.counter = parseInt(attribs.circleCounter) || parseInt(prefs.counter) || 1000;
         that.dialWidth = parseInt(attribs.circleDialwidth) || parseInt(prefs.dialWidth) || 5;
