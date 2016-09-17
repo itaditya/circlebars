@@ -8,11 +8,38 @@ Circle Bars
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0d0d04c60ab844e3a9039c4ba9062e36)](https://www.codacy.com/app/adityaa803/circlebars?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ncs-jss/circlebars&amp;utm_campaign=Badge_Grade)
 
 
-- implemented with css; no canvas, png or jpg sprites mess.
+- implemented with css; no canvas, png or jpg sprites messing around.
 - highly customisable with various designed skins.
 - less than 2KB when minified.
 - optimised and production ready code in dist/ folder. 
 - SASS support also.
+- CDN provided at [unpkg]"https://unpkg.com/circlebars@1.0.3/dist/"
+- Cross browser functionality
+
+What to include
+-------
+Include jQuery first and then follow up.
+
+1) By CDN
+```html
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/circle.css">
+<script src="https://unpkg.com/circlebars@1.0.3/dist/circle.js"></script>
+<!-- Optionally add this to use a skin : -->
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/skins/whitecircle.css">
+```
+
+1) By downloading the package
+
+* first install with `npm install circlebars` 
+* then include these files in your html.
+
+```html
+<link rel="stylesheet" type="text/css" href="node-modules/circlebars/dist/circle.css">
+<script src="node-modules/circlebars/dist/circle.js"></script>
+<!-- Optionally add this to use a skin : -->
+<link rel="stylesheet" type="text/css" href="node-modules/circlebars/dist/skins/whitecircle.css">
+```
+
 
 Example
 -------
@@ -121,6 +148,8 @@ and
 
 
 > Note that you can put any content inside` <div class="text"></div> ` like text, icons, images, etc. 
+
+Demo also available at  [Codepen](http://codepen.io/itaditya/pen/QKExjL)
 
 Supported browser
 -------
