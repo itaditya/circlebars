@@ -58,7 +58,7 @@
 22 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
 22 silly publish   readme: 'Circle Bars\n=============\n>Circle Bars is a Jquery plugin which is used to add circular countdown timers or progress bars in your project easily.\n\n[![npm](https://img.shields.io/npm/dm/circlebars.svg?style=flat-square)](https://www.npmjs.com/package/circlebars)\n[![npm](https://img.shields.io/npm/v/circlebars.svg?style=flat-square)](https://www.npmjs.com/package/circlebars)\n[![Github Releases](https://img.shields.io/github/downloads/ncs-jss/circlebars/total.svg?style=flat-square)](https://github.com/ncs-jss/circlebars)\n[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0d0d04c60ab844e3a9039c4ba9062e36)](https://www.codacy.com/app/adityaa803/circlebars?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ncs-jss/circlebars&amp;utm_campaign=Badge_Grade)\n\n\n- implemented with css; no canvas, png or jpg sprites messing around.\n- highly customisable with various designed skins.\n- less than 2KB when minified.\n- optimised and production ready code in dist/ folder. \n- SASS support also.\n- CDN provided at [unpkg](https://unpkg.com/circlebars@1.0.3/dist/)\n- Cross browser functionality\n\nWhat to include\n-------\nInclude jQuery first and then follow up.\n\n1) By CDN\n```html\n<link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/circle.css">\n<script src="https://unpkg.com/circlebars@1.0.3/dist/circle.js"></script>\n<!-- Optionally add this to use a skin : -->\n<link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/skins/whitecircle.css">\n```\n\n1) By downloading the package\n\n* first install with `npm install circlebars` \n* then include these files in your html.\n\n```html\n<link rel="stylesheet" type="text/css" href="node-modules/circlebars/dist/circle.css">\n<script src="node-modules/circlebars/dist/circle.js"></script>\n<!-- Optionally add this to use a skin : -->\n<link rel="stylesheet" type="text/css" href="node-modules/circlebars/dist/skins/whitecircle.css">\n```\n\n\nExample\n-------\n\n```html\n\n<div id="circle-1">\n    <div class="loader-bg">\n        <div class="text">00:00:00</div>\n    </div>\n</div>\n\n<script>\n    new Circlebar({\n        element : "#circle-1"\n    });\n</script>\n```\nor\n\n```html\n\n<div class="circle-2">\n    <div class="loader-bg">\n        <div class="text">00:00:00</div>\n    </div>\n</div>\n\n<script>\n    $(".circle-2").Circlebar({\n</script>\n```\nor\n```html\n\n<div class="circlebar">\n    <div class="loader-bg">\n        <div class="text">00:00:00</div>\n    </div>\n</div>\n```\n\nOptions\n-------\n\nOptions are provided as attributes \'data-circle-option\':\n\n```html\n<div id="circle-1" data-circle-dialWidth=10 data-circle-skin="white"></div>\n```\n\n or in the "Circlebar()" call :\n\n```javascript\n$("#circle-1").Circlebar({\n    maxValue : 20,\n    fontSize : "14px",\n    triggerPercentage : true\n});\n```\n- Note : The inline data attributes will overwrite the properties specified in the Circlebar() call .\n\nThe following options are supported :\n\n- Note : value and maxValue options are common for both (timer and progressbar) but vary slightly in essence to both.\n\nBehaviors :\n* startValue : starting time for timer or initial value of progressbar | default = 0 | integer \n* maxValue : the max time for timer to display or the value till which circlebar progresses | default = 60 | integer\n* counter : the time in which timer increase by 1s | default = 1000 | integer (1000 == 1sec)\n* triggerPercentage : should the circles styling alters according to progress level | default = false | boolean\n* type : type of circlebar can be timer, progress or manual | default = "timer"\n\nUI :\n\n* dialWidth : the thickness of the circular ring | default = 5 | integer\n* fontSize : the font size of the text in center of circle | default = "20px" | string with unit also ( units can be px, em, rm, % etc.)\n* fontColor : the font color of the text in center of circle | default = "rgb(135, 206, 235)" | string (unit can be HEX, rgb, rgba, hsla, hsv, etc.)\n* skin : the name of the custom skin to include | default = " " | string\n* size : the size of the whole circle bar | default = "150px" | string with unit also ( units can be px, % etc.)\n\nExample\n-------\n\n```html\n <div id="circle-1" data-circle-dialWidth=10 data-circle-skin="white">\n    <div class="loader-bg">\n      <div class="text">00:00:00</div>\n    </div>\n</div>\n\n$("#circle-1").Circlebar({\n    maxValue : 20,\n    fontSize : "14px",\n    triggerPercentage : true,\n    type: "progress"\n});\n```\nand \n\n```html\n<div class="circlebar" data-circle-startValue=0 data-circle-dialWidth=20 data-circle-size="250px">\n    <div class="loader-bg">\n        <div class="text">00:00:00</div>\n    </div>\n</div>\n```\n\n\n> Note that you can put any content inside` <div class="text"></div> ` like text, icons, images, etc. \n\nDemo also available at  [Codepen](http://codepen.io/itaditya/pen/QKExjL)\n\nSupported browser\n-------\n\nTested on Chrome, Safari, Firefox.\n\n',
 22 silly publish   readmeFilename: 'README.md',
-22 silly publish   gitHead: 'db9dccbbe9040ee738f8d40ddf053a11b7934af2',
+22 silly publish   gitHead: 'fea94c743119a2d808aaab2db8d4041f6022fdac',
 22 silly publish   _id: 'circlebars@1.0.3',
 22 silly publish   _shasum: '9d732c03910be3b34913e97c9c0b3f94503c8790',
 22 silly publish   _from: '.' }
@@ -78,22 +78,22 @@
 30 silly publish uploading /home/adi/.npm/circlebars/1.0.3/package.tgz
 31 verbose request uri https://registry.npmjs.org/circlebars
 32 verbose request sending authorization for write operation
-33 info attempt registry request try #1 at 23:20:04
+33 info attempt registry request try #1 at 23:21:10
 34 verbose request using bearer token for auth
-35 verbose request id 70fd3dc3a46bc47c
+35 verbose request id 290c638e68da4794
 36 http request PUT https://registry.npmjs.org/circlebars
 37 http 403 https://registry.npmjs.org/circlebars
 38 verbose headers { 'content-type': 'application/json',
 38 verbose headers   'cache-control': 'max-age=300',
 38 verbose headers   'content-length': '95',
 38 verbose headers   'accept-ranges': 'bytes',
-38 verbose headers   date: 'Thu, 29 Sep 2016 17:50:08 GMT',
+38 verbose headers   date: 'Thu, 29 Sep 2016 17:51:12 GMT',
 38 verbose headers   via: '1.1 varnish',
 38 verbose headers   connection: 'keep-alive',
-38 verbose headers   'x-served-by': 'cache-lcy1124-LCY',
+38 verbose headers   'x-served-by': 'cache-lcy1127-LCY',
 38 verbose headers   'x-cache': 'MISS',
 38 verbose headers   'x-cache-hits': '0',
-38 verbose headers   'x-timer': 'S1475171405.949185,VS0,VE2253',
+38 verbose headers   'x-timer': 'S1475171471.755665,VS0,VE1049',
 38 verbose headers   vary: 'Accept-Encoding' }
 39 verbose request invalidating /home/adi/.npm/registry.npmjs.org/circlebars on PUT
 40 error publish Failed PUT 403
