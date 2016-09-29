@@ -11,7 +11,14 @@
     "progress-bar",
     "timer",
     "round-bar",
-    "jquery"
+    "jquery",
+    "progressbar",
+    "circle",
+    "uidesign",
+    "formelement",
+    "knob",
+    "round input",
+    "percentage-circle"
   ],
   "author": "itaditya <adityaa803@gmail.com> (http://www.itaditya.github.io/)",
   "license": "ISC",
@@ -19,19 +26,8 @@
     "url": "https://github.com/ncs-jss/correctTime/issues"
   },
   "homepage": "https://github.com/ncs-jss/correctTime#readme",
-  "dependencies": {
-    "gulp-install": "^0.6.0"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-jshint": "^2.0.1",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-strip-debug": "^1.1.0",
-    "gulp-uglify": "^2.0.0",
-    "jshint": "^2.9.3"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }

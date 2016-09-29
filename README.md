@@ -111,6 +111,7 @@ Behaviors :
 * maxValue : the max time for timer to display or the value till which circlebar progresses | default = 60 | integer
 * counter : the time in which timer increase by 1s | default = 1000 | integer (1000 == 1sec)
 * triggerPercentage : should the circles styling alters according to progress level | default = false | boolean
+* type : type of circlebar can be timer, progress or manual | default = "timer"
 
 UI :
 
@@ -133,7 +134,8 @@ Example
 $("#circle-1").Circlebar({
     maxValue : 20,
     fontSize : "14px",
-    triggerPercentage : true
+    triggerPercentage : true,
+    type: "progress"
 });
 ```
 and 
