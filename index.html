@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Demo | Circle Bars</title>
-    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="assets/jquery.min.js"></script>
@@ -15,62 +15,67 @@
     <link rel="stylesheet" type="text/css" href="assets/skins/simplecircle.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <script type="text/javascript" src="assets/circle.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="page">
-      <h1>Examples: </h1>
-      <div class="circles-container">
-        <div id="circle-1" data-circle-dialWidth=10 data-circle-skin="yellow">
-            <div class="loader-bg">
-                <div class="text">00:00:00</div>
+        <h1>Examples: </h1>
+        <div class="circles-container">
+            <div id="circle-1" data-circle-dialWidth=10 data-circle-skin="yellow">
+                <div class="loader-bg">
+                    <div class="text">00:00:00</div>
+                </div>
+            </div>
+            <div class="circle-2" data-circle-counter=1000 data-circle-size="300px">
+                <div class="loader-bg">
+                    <div class="text">0%</div>
+                </div>
+            </div>
+            <div class="circlebar" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
+                <div class="loader-bg">
+                    <div class="text">00:00:00</div>
+                </div>
             </div>
         </div>
-        <div class="circle-2" data-circle-counter=1000 data-circle-size="300px">
-            <div class="loader-bg">
-                <div class="text">0%</div>
+        <div class="circles-container bg-white">
+            <div id="circle-3" data-circle-dialWidth=10 data-circle-skin="purple">
+                <div class="loader-bg">
+                    <div class="text">00:00:00</div>
+                </div>
+            </div>
+            <div class="circlebar" data-circle-startTime=0 data-circle-maxValue="90" data-circle-dialWidth=10 data-circle-size="100px" data-circle-type="progress">
+                <div class="loader-bg">
+                    <div class="text">00:00:00</div>
+                </div>
             </div>
         </div>
-        <div class="circlebar" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
-            <div class="loader-bg">
-                <div class="text">00:00:00</div>
-            </div>
-        </div>
-      </div>
+        <script>
+        $(document).ready(function() {
+            $("#circle-1").Circlebar({
+                maxValue: 20,
+                fontSize: "14px",
+                triggerPercentage: true
+            });
+            var t2 = new Circlebar({
+                element: ".circle-2",
+                maxValue: 252,
+                dialWidth: 40,
+                fontColor: "#777",
+                fontSize: "30px",
+                skin: "fire",
+                type: "manual"
+            });
+            t2.setValue(100);
 
-      <div class="circles-container bg-white">
-        <div id="circle-3" data-circle-dialWidth=10 data-circle-skin="purple">
-            <div class="loader-bg">
-                <div class="text">00:00:00</div>
-            </div>
-        </div>
-
-
-    </div>
-    <script>
-      $(document).ready(function(){
-        $("#circle-1").Circlebar({
-            maxValue : 20,
-            fontSize : "14px",
-            triggerPercentage : true
+            new Circlebar({
+                element: "#circle-3",
+                maxValue: 230,
+                size: "240px",
+                fontSize: "30px",
+                type: "progress"
+            });
         });
-        var t2= new Circlebar({
-            element : ".circle-2",
-            maxValue : 85,
-            type : "progress",
-            dialWidth : 40,
-            fontColor : "#777",
-            fontSize : "30px",
-            skin : "fire"
-        });
+        </script>
+</body>
 
-        new Circlebar({
-            element : "#circle-3",
-            maxValue : 20,
-            size : "240px",
-            fontSize : "30px",
-        });
-      });
-    </script>
-  </body>
 </html>
-  

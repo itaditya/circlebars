@@ -13,7 +13,7 @@ Circle Bars
 - less than 2KB when minified.
 - optimised and production ready code in dist/ folder. 
 - SASS support also.
-- CDN provided at [unpkg]"https://unpkg.com/circlebars@1.0.3/dist/"
+- CDN provided at [unpkg](https://unpkg.com/circlebars@1.0.3/dist/)
 - Cross browser functionality
 
 What to include
