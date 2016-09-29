@@ -1,122 +1,26 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'version', '1.0.4' ]
 2 info using npm@3.10.7
 3 info using node@v0.10.25
 4 verbose node symlink /usr/bin/node
-5 verbose publish [ '.' ]
-6 silly cache add args [ '.', null ]
-7 verbose cache add spec .
-8 silly cache add parsed spec { raw: '.',
-8 silly cache add   scope: null,
-8 silly cache add   escapedName: null,
-8 silly cache add   name: null,
-8 silly cache add   rawSpec: '.',
-8 silly cache add   spec: '/media/adi/Coding/git/circlebars',
-8 silly cache add   type: 'directory' }
-9 verbose addLocalDirectory /home/adi/.npm/circlebars/1.0.3/package.tgz not in flight; packing
-10 verbose correctMkdir /home/adi/.npm correctMkdir not in flight; initializing
-11 info lifecycle circlebars@1.0.3~prepublish: circlebars@1.0.3
-12 silly lifecycle circlebars@1.0.3~prepublish: no script for prepublish, continuing
-13 verbose tar pack [ '/home/adi/.npm/circlebars/1.0.3/package.tgz',
-13 verbose tar pack   '/media/adi/Coding/git/circlebars' ]
-14 verbose tarball /home/adi/.npm/circlebars/1.0.3/package.tgz
-15 verbose folder /media/adi/Coding/git/circlebars
-16 verbose addLocalTarball adding from inside cache /home/adi/.npm/circlebars/1.0.3/package.tgz
-17 verbose correctMkdir /home/adi/.npm correctMkdir not in flight; initializing
-18 silly cache afterAdd circlebars@1.0.3
-19 verbose afterAdd /home/adi/.npm/circlebars/1.0.3/package/package.json not in flight; writing
-20 verbose correctMkdir /home/adi/.npm correctMkdir not in flight; initializing
-21 verbose afterAdd /home/adi/.npm/circlebars/1.0.3/package/package.json written
-22 silly publish { name: 'circlebars',
-22 silly publish   version: '1.0.3',
-22 silly publish   description: 'a jQuery plugin for circular progress bars and countdown timers',
-22 silly publish   main: 'dist/circle.js',
-22 silly publish   repository:
-22 silly publish    { type: 'git',
-22 silly publish      url: 'git+https://github.com/ncs-jss/correctTime.git' },
-22 silly publish   keywords:
-22 silly publish    [ 'progress-bar',
-22 silly publish      'timer',
-22 silly publish      'round-bar',
-22 silly publish      'jquery',
-22 silly publish      'progressbar',
-22 silly publish      'circle',
-22 silly publish      'uidesign',
-22 silly publish      'formelement',
-22 silly publish      'knob',
-22 silly publish      'round input',
-22 silly publish      'percentage-circle' ],
-22 silly publish   author:
-22 silly publish    { name: 'itaditya',
-22 silly publish      email: 'adityaa803@gmail.com',
-22 silly publish      url: 'http://www.itaditya.github.io/' },
-22 silly publish   license: 'ISC',
-22 silly publish   bugs: { url: 'https://github.com/ncs-jss/correctTime/issues' },
-22 silly publish   homepage: 'https://github.com/ncs-jss/correctTime#readme',
-22 silly publish   dependencies: {},
-22 silly publish   devDependencies: {},
-22 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
-22 silly publish   readme: 'Circle Bars\n=============\n>Circle Bars is a Jquery plugin which is used to add circular countdown timers or progress bars in your project easily.\n\n[![npm](https://img.shields.io/npm/dm/circlebars.svg?style=flat-square)](https://www.npmjs.com/package/circlebars)\n[![npm](https://img.shields.io/npm/v/circlebars.svg?style=flat-square)](https://www.npmjs.com/package/circlebars)\n[![Github Releases](https://img.shields.io/github/downloads/ncs-jss/circlebars/total.svg?style=flat-square)](https://github.com/ncs-jss/circlebars)\n[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0d0d04c60ab844e3a9039c4ba9062e36)](https://www.codacy.com/app/adityaa803/circlebars?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ncs-jss/circlebars&amp;utm_campaign=Badge_Grade)\n\n\n- implemented with css; no canvas, png or jpg sprites messing around.\n- highly customisable with various designed skins.\n- less than 2KB when minified.\n- optimised and production ready code in dist/ folder. \n- SASS support also.\n- CDN provided at [unpkg](https://unpkg.com/circlebars@1.0.3/dist/)\n- Cross browser functionality\n\nWhat to include\n-------\nInclude jQuery first and then follow up.\n\n1) By CDN\n```html\n<link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/circle.css">\n<script src="https://unpkg.com/circlebars@1.0.3/dist/circle.js"></script>\n<!-- Optionally add this to use a skin : -->\n<link rel="stylesheet" type="text/css" href="https://unpkg.com/circlebars@1.0.3/dist/skins/whitecircle.css">\n```\n\n1) By downloading the package\n\n* first install with `npm install circlebars` \n* then include these files in your html.\n\n```html\n<link rel="stylesheet" type="text/css" href="node-modules/circlebars/dist/circle.css">\n<script src="node-modules/circlebars/dist/circle.js"></script>\n<!-- Optionally add this to use a skin : -->\n<link rel="stylesheet" type="text/css" href="node-modules/circlebars/dist/skins/whitecircle.css">\n```\n\n\nExample\n-------\n\n```html\n\n<div id="circle-1">\n    <div class="loader-bg">\n        <div class="text">00:00:00</div>\n    </div>\n</div>\n\n<script>\n    new Circlebar({\n        element : "#circle-1"\n    });\n</script>\n```\nor\n\n```html\n\n<div class="circle-2">\n    <div class="loader-bg">\n        <div class="text">00:00:00</div>\n    </div>\n</div>\n\n<script>\n    $(".circle-2").Circlebar({\n</script>\n```\nor\n```html\n\n<div class="circlebar">\n    <div class="loader-bg">\n        <div class="text">00:00:00</div>\n    </div>\n</div>\n```\n\nOptions\n-------\n\nOptions are provided as attributes \'data-circle-option\':\n\n```html\n<div id="circle-1" data-circle-dialWidth=10 data-circle-skin="white"></div>\n```\n\n or in the "Circlebar()" call :\n\n```javascript\n$("#circle-1").Circlebar({\n    maxValue : 20,\n    fontSize : "14px",\n    triggerPercentage : true\n});\n```\n- Note : The inline data attributes will overwrite the properties specified in the Circlebar() call .\n\nThe following options are supported :\n\n- Note : value and maxValue options are common for both (timer and progressbar) but vary slightly in essence to both.\n\nBehaviors :\n* startValue : starting time for timer or initial value of progressbar | default = 0 | integer \n* maxValue : the max time for timer to display or the value till which circlebar progresses | default = 60 | integer\n* counter : the time in which timer increase by 1s | default = 1000 | integer (1000 == 1sec)\n* triggerPercentage : should the circles styling alters according to progress level | default = false | boolean\n* type : type of circlebar can be timer, progress or manual | default = "timer"\n\nUI :\n\n* dialWidth : the thickness of the circular ring | default = 5 | integer\n* fontSize : the font size of the text in center of circle | default = "20px" | string with unit also ( units can be px, em, rm, % etc.)\n* fontColor : the font color of the text in center of circle | default = "rgb(135, 206, 235)" | string (unit can be HEX, rgb, rgba, hsla, hsv, etc.)\n* skin : the name of the custom skin to include | default = " " | string\n* size : the size of the whole circle bar | default = "150px" | string with unit also ( units can be px, % etc.)\n\nExample\n-------\n\n```html\n <div id="circle-1" data-circle-dialWidth=10 data-circle-skin="white">\n    <div class="loader-bg">\n      <div class="text">00:00:00</div>\n    </div>\n</div>\n\n$("#circle-1").Circlebar({\n    maxValue : 20,\n    fontSize : "14px",\n    triggerPercentage : true,\n    type: "progress"\n});\n```\nand \n\n```html\n<div class="circlebar" data-circle-startValue=0 data-circle-dialWidth=20 data-circle-size="250px">\n    <div class="loader-bg">\n        <div class="text">00:00:00</div>\n    </div>\n</div>\n```\n\n\n> Note that you can put any content inside` <div class="text"></div> ` like text, icons, images, etc. \n\nDemo also available at  [Codepen](http://codepen.io/itaditya/pen/QKExjL)\n\nSupported browser\n-------\n\nTested on Chrome, Safari, Firefox.\n\n',
-22 silly publish   readmeFilename: 'README.md',
-22 silly publish   gitHead: 'fea94c743119a2d808aaab2db8d4041f6022fdac',
-22 silly publish   _id: 'circlebars@1.0.3',
-22 silly publish   _shasum: '9d732c03910be3b34913e97c9c0b3f94503c8790',
-22 silly publish   _from: '.' }
-23 verbose getPublishConfig undefined
-24 silly mapToRegistry name circlebars
-25 silly mapToRegistry using default registry
-26 silly mapToRegistry registry https://registry.npmjs.org/
-27 silly mapToRegistry data { raw: 'circlebars',
-27 silly mapToRegistry   scope: null,
-27 silly mapToRegistry   escapedName: 'circlebars',
-27 silly mapToRegistry   name: 'circlebars',
-27 silly mapToRegistry   rawSpec: '',
-27 silly mapToRegistry   spec: 'latest',
-27 silly mapToRegistry   type: 'tag' }
-28 silly mapToRegistry uri https://registry.npmjs.org/circlebars
-29 verbose publish registryBase https://registry.npmjs.org/
-30 silly publish uploading /home/adi/.npm/circlebars/1.0.3/package.tgz
-31 verbose request uri https://registry.npmjs.org/circlebars
-32 verbose request sending authorization for write operation
-33 info attempt registry request try #1 at 23:21:10
-34 verbose request using bearer token for auth
-35 verbose request id 290c638e68da4794
-36 http request PUT https://registry.npmjs.org/circlebars
-37 http 403 https://registry.npmjs.org/circlebars
-38 verbose headers { 'content-type': 'application/json',
-38 verbose headers   'cache-control': 'max-age=300',
-38 verbose headers   'content-length': '95',
-38 verbose headers   'accept-ranges': 'bytes',
-38 verbose headers   date: 'Thu, 29 Sep 2016 17:51:12 GMT',
-38 verbose headers   via: '1.1 varnish',
-38 verbose headers   connection: 'keep-alive',
-38 verbose headers   'x-served-by': 'cache-lcy1127-LCY',
-38 verbose headers   'x-cache': 'MISS',
-38 verbose headers   'x-cache-hits': '0',
-38 verbose headers   'x-timer': 'S1475171471.755665,VS0,VE1049',
-38 verbose headers   vary: 'Accept-Encoding' }
-39 verbose request invalidating /home/adi/.npm/registry.npmjs.org/circlebars on PUT
-40 error publish Failed PUT 403
-41 verbose stack Error: "You cannot publish over the previously published version 1.0.3." : circlebars
-41 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
-41 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
-41 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
-41 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
-41 verbose stack     at Request.EventEmitter.emit (events.js:98:17)
-41 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1044:10)
-41 verbose stack     at Request.EventEmitter.emit (events.js:95:17)
-41 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:965:12)
-41 verbose stack     at IncomingMessage.EventEmitter.emit (events.js:117:20)
-41 verbose stack     at _stream_readable.js:920:16
-42 verbose statusCode 403
-43 verbose pkgid circlebars
-44 verbose cwd /media/adi/Coding/git/circlebars
-45 error Linux 4.4.0-38-generic
-46 error argv "node" "/usr/local/bin/npm" "publish"
-47 error node v0.10.25
-48 error npm  v3.10.7
-49 error code E403
-50 error "You cannot publish over the previously published version 1.0.3." : circlebars
-51 error If you need help, you may report this error at:
-51 error     <https://github.com/npm/npm/issues>
-52 verbose exit [ 1, true ]
+5 info git [ 'status', '--porcelain' ]
+6 verbose stack Error: Git working directory not clean.
+6 verbose stack M npm-debug.log
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:247:19
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/no-progress-while-running.js:21:8
+6 verbose stack     at ChildProcess.exithandler (child_process.js:635:7)
+6 verbose stack     at ChildProcess.EventEmitter.emit (events.js:98:17)
+6 verbose stack     at maybeClose (child_process.js:743:16)
+6 verbose stack     at Socket.<anonymous> (child_process.js:956:11)
+6 verbose stack     at Socket.EventEmitter.emit (events.js:95:17)
+6 verbose stack     at Pipe.close (net.js:466:12)
+7 verbose cwd /media/adi/Coding/git/circlebars
+8 error Linux 4.4.0-38-generic
+9 error argv "node" "/usr/local/bin/npm" "version" "1.0.4"
+10 error node v0.10.25
+11 error npm  v3.10.7
+12 error Git working directory not clean.
+12 error M npm-debug.log
+13 error If you need help, you may report this error at:
+13 error     <https://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]
