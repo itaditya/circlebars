@@ -1,10 +1,11 @@
-require('es6-promise').polyfill();
+//require('es6-promise').polyfill();
 var gulp = require('gulp');
-var jshint = require('gulp-jshint');
+//var jshint = require('gulp-jshint');
 var autoprefix = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
 var stripDebug = require('gulp-strip-debug');
 var uglify = require('gulp-uglify');
+var sass = require('gulp-sass');
  
 gulp.task('lint', function() {
   return gulp.src(['./assets/*.js','!./assets/jquery.min.js'])
@@ -26,6 +27,16 @@ gulp.task('skins', function() {
     .pipe(minifyCSS())
     .pipe(gulp.dest('./dist/skins'));
 });
+
+// SCSS Compilation for Skins
+gulp.task('scss', function() {
+  gulp.src(['./assets/skins/*.scss'])
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefix('last 2 versions'))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('./dist/skins'));
+});
+
 // JS concat, strip debugging and minify
 gulp.task('scripts', function() {
   gulp.src(['./assets/*.js'])
@@ -33,7 +44,7 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(gulp.dest('./dist'));
 });
-var bs = require('browser-sync').create(); // create a browser sync instance.
+//var bs = require('browser-sync').create(); // create a browser sync instance.
 
 gulp.task('browser-sync', function() {
     bs.init({
