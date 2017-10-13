@@ -7,6 +7,9 @@ Circle Bars
 [![Github Releases](https://img.shields.io/github/downloads/ncs-jss/circlebars/total.svg?style=flat-square)](https://github.com/ncs-jss/circlebars)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0d0d04c60ab844e3a9039c4ba9062e36)](https://www.codacy.com/app/adityaa803/circlebars?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ncs-jss/circlebars&amp;utm_campaign=Badge_Grade)
 
+<p align="center">
+  <img src="demo.gif" alt="demo circlebars gif">
+</p>
 
 - implemented with css; no canvas, png or jpg sprites messing around.
 - highly customisable with various designed skins.
