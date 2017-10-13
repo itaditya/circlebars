@@ -124,6 +124,21 @@ UI :
 * skin : the name of the custom skin to include | default = " " | string
 * size : the size of the whole circle bar | default = "150px" | string with unit also ( units can be px, % etc.)
 
+Avaliable skins
+-------
+
+All Skins are located in the [`dist/skins`](https://github.com/itaditya/circlebars/tree/master/dist/skins) folder. See above documentation for instructions on how to include and use them. Here are the skins currently avaliable:
+
+* [Blue](https://github.com/itaditya/circlebars/blob/master/dist/skins/bluecircle.css)
+* [Cobalt](https://github.com/itaditya/circlebars/blob/master/dist/skins/cobaltcircle.css)
+* [Fire](https://github.com/itaditya/circlebars/blob/master/dist/skins/firecircle.css)
+* [Purple](https://github.com/itaditya/circlebars/blob/master/dist/skins/purplecircle.css)
+* [Simple](https://github.com/itaditya/circlebars/blob/master/dist/skins/simplecircle.css)
+* [White](https://github.com/itaditya/circlebars/blob/master/dist/skins/whitecircle.css)
+* [Yellow](https://github.com/itaditya/circlebars/blob/master/dist/skins/yellowcircle.css)
+
+To make your own skin, use one of these files and edit the css to your specification.
+
 Example
 -------
 
