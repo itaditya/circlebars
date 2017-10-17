@@ -127,7 +127,7 @@ UI :
 Avaliable skins
 -------
 
-All Skins are located in the [`dist/skins`](https://github.com/itaditya/circlebars/tree/master/dist/skins) folder. See above documentation for instructions on how to include and use them. Here are the skins currently avaliable:
+All Skins are located in the [`dist/skins`](https://github.com/itaditya/circlebars/tree/master/dist/skins) folder. Here are the ones currently avaliable:
 
 * [Blue](https://github.com/itaditya/circlebars/blob/master/dist/skins/bluecircle.css)
 * [Cobalt](https://github.com/itaditya/circlebars/blob/master/dist/skins/cobaltcircle.css)
@@ -137,7 +137,26 @@ All Skins are located in the [`dist/skins`](https://github.com/itaditya/circleba
 * [White](https://github.com/itaditya/circlebars/blob/master/dist/skins/whitecircle.css)
 * [Yellow](https://github.com/itaditya/circlebars/blob/master/dist/skins/yellowcircle.css)
 
-To make your own skin, use one of these files and edit the css to your specification.
+To use a skin, first include it as a css file.
+
+```html
+<link rel="stylesheet" type="text/css" href="path/to/skins/bluecircle.css">
+```
+
+Then, you can set the custom skin name with the `skin` option when creating your circebar instance.
+
+```javascript
+$("#circle-1").Circlebar({
+    skin: "blue"
+});
+```
+
+Or, as a data attribute when using a DOM element.
+```html
+<div id="circle-1" data-circle-skin="blue"></div>
+```
+
+To make your own skin, use one of the included ones and edit the css to your specification.
 
 Example
 -------
