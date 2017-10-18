@@ -132,6 +132,7 @@ All Skins are located in the [`dist/skins`](https://github.com/itaditya/circleba
 * [Blue](https://github.com/itaditya/circlebars/blob/master/dist/skins/bluecircle.css)
 * [Cobalt](https://github.com/itaditya/circlebars/blob/master/dist/skins/cobaltcircle.css)
 * [Fire](https://github.com/itaditya/circlebars/blob/master/dist/skins/firecircle.css)
+* [Matte Black](https://github.com/itaditya/circlebars/blob/master/assets/skins/matteblackcircle.css)
 * [Purple](https://github.com/itaditya/circlebars/blob/master/dist/skins/purplecircle.css)
 * [Simple](https://github.com/itaditya/circlebars/blob/master/dist/skins/simplecircle.css)
 * [White](https://github.com/itaditya/circlebars/blob/master/dist/skins/whitecircle.css)
