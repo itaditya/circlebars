@@ -1,0 +1,11 @@
+.khaki .loader-bg {
+  border-color: rgba(255,255,255,0.4);
+  box-shadow: 2px 2px 20px 0 rgba(0,0,0,0.6);
+}
+.khaki .text {
+  color: #fff68f !important;
+  font-weight: bold;
+}
+.khaki .loader-spinner {
+  border-color: #fff68f;
+}
