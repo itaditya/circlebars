@@ -1,0 +1,13 @@
+@import './variables';
+
+.loader-bg {
+  border-color: $border-color;
+  box-shadow: $box-shadow;
+}
+.text {
+  color: $primary-color !important;
+  font-weight: bold;
+}
+.loader-spinner {
+  border-color: $primary-color;
+}
