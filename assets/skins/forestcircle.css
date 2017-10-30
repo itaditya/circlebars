@@ -1,0 +1,14 @@
+
+/*Add attribute data-circle-skin = "green" to the div */
+
+
+.green .loader-bg {
+  border-color: rgba(39,146,68,0.1);
+  box-shadow: inset 2px 2px 20px 0 rgba(0,0,0,0.1) !important;
+}
+.green .text {
+  font-size: 20px;
+  color: #55ba36 !important;
+}
+.green .loader-spinner {
+  border-color: #55ba36;
