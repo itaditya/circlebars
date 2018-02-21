@@ -6,6 +6,7 @@ Circle Bars
 [![npm](https://img.shields.io/npm/v/circlebars.svg?style=flat-square)](https://www.npmjs.com/package/circlebars)
 [![Github Releases](https://img.shields.io/github/downloads/ncs-jss/circlebars/total.svg?style=flat-square)](https://github.com/ncs-jss/circlebars)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0d0d04c60ab844e3a9039c4ba9062e36)](https://www.codacy.com/app/adityaa803/circlebars?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ncs-jss/circlebars&amp;utm_campaign=Badge_Grade)
+[![Open Source Helpers](https://www.codetriage.com/itaditya/circlebars/badges/users.svg)](https://www.codetriage.com/itaditya/circlebars)
 
 <p align="center">
   <img src="demo.gif" alt="demo circlebars gif">
