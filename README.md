@@ -72,7 +72,7 @@ or
 </div>
 
 <script>
-    $(".circle-2").Circlebar({
+    $(".circle-2").Circlebar();
 </script>
 ```
 or
